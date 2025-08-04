@@ -1,0 +1,100 @@
+# -------------------------
+# Flutter/Dart/Pub Related
+# -------------------------
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter-versions
+.packages
+.pub-cache/
+.pub/
+build/
+**/doc/api/
+**/ios/Flutter/.last_build_id
+
+# Symbolication
+app.*.symbols
+
+# Obfuscation
+app.*.map.json
+
+# -------------------------
+# Android Related
+# -------------------------
+/android/.gradle
+/android/captures
+/android/.idea
+/android/local.properties
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# -------------------------
+# iOS Related
+# -------------------------
+ios/Flutter/App.framework
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/.symlinks
+ios/Pods
+ios/Runner.xcworkspace
+ios/build/
+ios/.dart_tool/
+/ios/.generated/
+
+# CocoaPods
+ios/Podfile.lock
+
+# Xcode
+*.xcworkspace
+*.xcuserstate
+*.xcuserdatad*
+*.moved-aside
+*.xccheckout
+DerivedData/
+*.hmap
+
+# -------------------------
+# macOS Related
+# -------------------------
+macos/Flutter/ephemeral/
+macos/Pods
+macos/Runner.xcworkspace
+macos/Podfile.lock
+macos/build/
+macos/.dart_tool/
+
+# -------------------------
+# Web Related
+# -------------------------
+web/.dart_tool/
+web/build/
+
+# -------------------------
+# VS Code
+# -------------------------
+.vscode/
+
+# -------------------------
+# IntelliJ / Android Studio
+# -------------------------
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# -------------------------
+# Miscellaneous
+# -------------------------
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
