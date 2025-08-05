@@ -1,29 +1,27 @@
 name: flutter_chatbot_refugee
-description: A Flutter app to help refugees find the nearest UN shelters, grocery stores, and primary health care centers using offline maps and translation features.
-
-publish_to: 'none'
-
+description: Chat + offline map Flutter app for refugee support
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: '>=2.17.0 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
-  flutter_localizations:
-    sdk: flutter
-  http: ^0.13.3
-  provider: ^5.0.0
-  google_maps_flutter: ^2.0.6
-  speech_to_text: ^5.0.0
-  flutter_tts: ^3.2.2
-  path_provider: ^2.0.2
-  cached_network_image: ^3.1.0
+  sliding_up_panel: ^2.0.0+1
+  flutter_tts: ^3.6.3
+  speech_to_text: ^6.1.1
+  maplibre_gl:
+    git:
+      url: https://github.com/maplibre/flutter-maplibre-gl.git
+      ref: main
+      path: maplibre_gl
 
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
+
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/style.json          # Offline map style
+    # - assets/tiles/              # Offline tiles (z/x/y.png)

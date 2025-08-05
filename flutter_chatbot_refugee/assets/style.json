@@ -1,0 +1,22 @@
+{
+  "version": 8,
+  "name": "RefugeeAppStyle",
+  "sources": {
+    "raster-tiles": {
+      "type": "raster",
+      "tiles": [
+        "asset://assets/tiles/{z}/{x}/{y}.png"
+      ],
+      "tileSize": 256
+    }
+  },
+  "layers": [
+    {
+      "id": "simple-tiles",
+      "type": "raster",
+      "source": "raster-tiles",
+      "minzoom": 0,
+      "maxzoom": 22
+    }
+  ]
+}
