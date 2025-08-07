@@ -23,5 +23,6 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/style.json          # Offline map style
-    # - assets/tiles/              # Offline tiles (z/x/y.png)
+    - assets/style.json
+    - assets/sudan_tiles/
+

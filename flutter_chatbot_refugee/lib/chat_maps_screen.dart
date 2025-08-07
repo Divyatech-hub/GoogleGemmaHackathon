@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
-import 'package:maplibre_gl/maplibre_gl.dart'; // ✅ Corrected import
+import 'package:maplibre_gl/maplibre_gl.dart';
 
 class RefugeeAssistantScreen extends StatefulWidget {
   const RefugeeAssistantScreen({super.key});
@@ -12,9 +12,9 @@ class RefugeeAssistantScreen extends StatefulWidget {
 class _RefugeeAssistantScreenState extends State<RefugeeAssistantScreen> {
   final PanelController _panelController = PanelController();
   final TextEditingController _messageController = TextEditingController();
-  MaplibreMapController? _mapController; // nullable
+  MaplibreMapController? _mapController;
 
-  static const LatLng _center = LatLng(37.7749, -122.4194); // San Francisco
+  static const LatLng _center = LatLng(12.8628, 30.2176); // Sudan
 
   @override
   void dispose() {
@@ -34,17 +34,28 @@ class _RefugeeAssistantScreenState extends State<RefugeeAssistantScreen> {
         panelBuilder: (scrollController) => _buildMapPanel(scrollController),
         body: Stack(
           children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(16, 80, 16, 120),
+            Center(
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  const Text(
+                    "Hidayah Guide",
+                    style: TextStyle(
+                      fontSize: 26,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.orange,
+                    ),
+                  ),
+                  const SizedBox(height: 16),
                   const Text(
                     "How can we help you today?",
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
                   ),
-                  const Spacer(),
-                  _buildInputBar(),
+                  const SizedBox(height: 40),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: _buildInputBar(),
+                  ),
                 ],
               ),
             ),
@@ -116,8 +127,9 @@ class _RefugeeAssistantScreenState extends State<RefugeeAssistantScreen> {
             styleString: 'asset://assets/style.json',
             initialCameraPosition: const CameraPosition(
               target: _center,
-              zoom: 12.0,
+              zoom: 5.0,
             ),
+
             onMapCreated: (controller) {
               setState(() {
                 _mapController = controller;
